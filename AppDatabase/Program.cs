@@ -39,9 +39,9 @@ try
 catch
 {
     Console.WriteLine("Erro na inserção!");
-}   
-
-
+}
+try
+{
     Console.Clear();
     Console.WriteLine("SELECT na tabela endereços com LEFT JOIN nas tabelas municípios e estados.");
     string select = "SELECT e.idendereco, e.logradouro, e.numero, e.bairro , m.codibge, m.nome, es.uf FROM rentcar.endereco e " +
@@ -58,8 +58,14 @@ catch
         Console.WriteLine("Código Município: " + reader.GetInt32(4));
         Console.WriteLine("Município: " + reader.GetString(5));
         Console.WriteLine("UF: " + reader.GetString(6));
-        Console.WriteLine();
+        Console.WriteLine("---------------------------------");
     }
+
+}
+catch
+{
+    Console.WriteLine("Erro no SELECT!");
+}
 
 
 static string GetMaskedPassword()
