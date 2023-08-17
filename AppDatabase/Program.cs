@@ -22,6 +22,7 @@ using (NpgsqlConnection conn = new NpgsqlConnection(connectionString))
     catch (Exception ex)
     {
         Console.WriteLine("Erro na conexão com o RDS AWS: " + ex.Message);
+        return;
     }
 
     InsertIntoUsuario(conn);
