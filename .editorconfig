@@ -5,3 +5,6 @@ dotnet_diagnostic.CS8600.severity = none
 
 # CS8604: Possível argumento de referência nula.
 dotnet_diagnostic.CS8604.severity = none
+
+# CS0168: A variável foi declarada, mas nunca foi usada
+dotnet_diagnostic.CS0168.severity = none

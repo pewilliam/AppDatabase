@@ -84,7 +84,6 @@ static void PerformSelect(NpgsqlConnection connection)
     }
 }
 
-
 static string GetMaskedPassword()
 {
     var pass = string.Empty;
